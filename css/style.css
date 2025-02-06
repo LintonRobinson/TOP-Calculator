@@ -58,6 +58,7 @@
 /******************************************
 /* BASE STYLES
 /*******************************************/
+
 /* Body Styling */
 body {
      height: 100vh;
@@ -71,6 +72,7 @@ body {
 /******************************************
 /* MENU BAR
 /*******************************************/
+
 /* Nav Styling */
 nav {
      display: flex;
@@ -108,6 +110,7 @@ nav {
 /******************************************
 /* MAIN
 /*******************************************/
+
 /* Main Styling */
 main {
      display: flex;
@@ -158,6 +161,7 @@ main {
 /* MAC DOCK
 /*******************************************/
 
+/* Mac dock wrapper styling */
 .mac-dock-wrapper {
      display: flex;
      align-self: center;
@@ -172,6 +176,8 @@ main {
      padding: 4px 6px 4px 6px;
      gap: 10px;
 }
+
+/* Mac dock icon wrapper styling */
 .mac-doc-icon-wrapper {
      display: flex;
      flex-direction: column;
@@ -179,10 +185,13 @@ main {
      align-items: center;
      gap: 5px;
 }
+
+/* Mac dock icon wrapper align to top */
 .mac-dock-wrapper .mac-doc-icon-wrapper:nth-child(2), .mac-dock-wrapper .mac-doc-icon-wrapper:nth-child(3),.mac-dock-wrapper .mac-doc-icon-wrapper:nth-child(6) {
      justify-content: start;
 }
 
+/* Spotify icon styling */
 .mac-dock-wrapper .mac-doc-icon-wrapper:nth-child(6) {
      border-right: #46483D solid 1.5px;
      border-radius: 1px;
@@ -191,10 +200,12 @@ main {
 
 }
 
+/* Dock icon styling */
 .dock-icon {
      width: 60px;
 }
 
+/* Mac dock dot styling */
 .mac-dock-dot {
      width: 5px;
      height: 5px;
