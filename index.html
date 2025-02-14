@@ -20,25 +20,19 @@
         <nav>
             <div class="menu-bar-left">
                 <img class="menu-bar-logos" src="/images/apple-icon.png" alt="Apple Logo">
-                <span class="menu-bar-text">Finder</span>
+                <span class="menu-bar-text">Inspired By macOS</span>
                 <span class="menu-bar-text">File</span>
                 <span class="menu-bar-text">Edit</span>
                 <span class="menu-bar-text">View</span>
-                <span class="menu-bar-text">Go</span>
-                <span class="menu-bar-text">Window</span>
-                <span class="menu-bar-text">Help</span>
+                <span class="menu-bar-text clickToReset">Click To Reset Calculator Position</span>
             </div>
             <div class="menu-bar-right">
                 <img class="menu-bar-logos" src="/images/wifi-icon.png" alt="Apple Logo">
                 <img class="menu-bar-logos" src="/images/search-icon.png" alt="Apple Logo">
                 <img class="menu-bar-logos" src="/images/control-center-icon.png" alt="Apple Logo">
-                <span class="menu-bar-text">Date Will Go Here</span>
+                <span class="menu-bar-text liveDateAndTime"></span>
             </div>
         </nav>
-
-        <div class="calculatorMainWrapper">
-
-        </div>
         <div class="mac-folder-wrapper">
             <div class="mac-folder-icon-wrapper">
                 <img class="folder-icon" src="/images/folder-icon.png" alt="">
@@ -47,6 +41,100 @@
             <div class="mac-folder-icon-wrapper">
                 <img class="folder-icon" src="/images/folder-icon.png" alt="">
                 <span>100 Devs</span>
+            </div>
+        </div>
+        <div class="calculatorMainWrapper">
+            <div class="clickToDragMessage">Click and Hold To Drag</div>
+            <div class="calculator-top-wrapper calculatorTopWrapper">
+                <div class="calculator-resize-button"></div>
+                <div class="calculator-resize-button"></div>
+                <div class="calculator-resize-button"></div>
+            </div>
+            <div class="calculator-bottom-wrapper">
+                <div class="calculatorResultWindow">0</div>
+                <div class="calculator-keypad-wrapper">
+                    <button class="ac light-grey-calculator-btn">
+
+                        <div>AC</div>
+                    </button>
+                    <button class="plusMinus light-grey-calculator-btn">
+
+                        <div>+/-</div>
+                    </button>
+                    <button class="modulo light-grey-calculator-btn">
+
+                        <div>%</div>
+                    </button>
+                    <button class="division operator">
+
+                        <div>÷</div>
+                    </button>
+                    <button class="seven number">
+                        <div id="sevenDiv">7</div>
+                    </button>
+                    <button class="eight number">
+
+                        <div>8</div>
+                    </button>
+                    <button class="nine number">
+
+                        <div>9</div>
+                    </button>
+                    <button class="multiplication operator">
+
+                        <div>×</div>
+                    </button>
+                    <button class="four number">
+
+                        <div>4</div>
+                    </button>
+                    <button class="five number">
+
+                        <div>5</div>
+                    </button>
+                    <button class="six number">
+
+                        <div>6</div>
+                    </button>
+                    <button class="minus operator">
+
+                        <div>-</div>
+                    </button>
+                    <button class="one number">
+
+                        <div>1</div>
+                    </button>
+                    <button class="two number">
+
+                        <div>2</div>
+                    </button>
+                    <button class="three number">
+
+                        <div>3</div>
+                    </button>
+                    <button class="plus operator">
+
+                        <div>+</div>
+                    </button>
+                    <a class="github-logo">
+
+                        <div class="git-logo-btn-wrapper">
+                            <img src="/images/github-icon.png" alt="GitHub Logo">
+                        </div>
+                    </a>
+                    <button class="zero number">
+
+                        <div>0</div>
+                    </button>
+                    <button class="decimalPoint number">
+
+                        <div>.</div>
+                    </button>
+                    <button class="equals operator">
+
+                        <div>=</div>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -79,6 +167,7 @@
             </div>
         </div>
     </main>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

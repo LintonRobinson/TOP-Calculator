@@ -24,7 +24,15 @@
      margin: 0;
 }
 
-
+button {
+     background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 /******************************************
 /* TYPOGRAPHY
@@ -67,6 +75,7 @@ body {
      background-image: url(/images/Sequoia-Sunrise.png);
      background-size: cover;
      background-repeat: no-repeat;
+     position: relative;
 }
 
 /******************************************
@@ -77,13 +86,14 @@ body {
 nav {
      display: flex;
      justify-content: space-between;
-     background-color: #46483D;
-     padding: 10px 20px;
+     background: linear-gradient(90deg, rgba(71,74,56,1) 0%, rgba(66,67,61,1) 52%);
+     padding: 0 20px;
      font-family: SanFrancisco;
      color: white;
      width: 100%;
      font-size: 0.85rem;
      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+     height: 37px;
 }
 
 /* Menu Bar Left Styling */
@@ -93,6 +103,17 @@ nav {
      gap: 25px;
 }
 
+/* Click To Reset Button Styling */
+.clickToReset {
+     color: rgb(255, 246, 145);
+     height: 100%;
+     display: flex;
+     align-items: center;
+     padding:  0 10px;
+     transform: translateX(-10px);
+}
+
+
 /* Menu Bar Right Styling */
 .menu-bar-right {
      display: flex;
@@ -100,7 +121,9 @@ nav {
      gap: 20px; 
 }
 
-/* Menu Bar Left Styling */
+
+
+/* Menu Apple Logo Styling */
 .menu-bar-logos {
      width: 17px;
      height: 17px;
@@ -113,18 +136,18 @@ nav {
 
 /* Main Styling */
 main {
-     display: flex;
      height: 100vh;
-     flex-direction: column;
-     justify-content: space-between;
+     width: 100vw;
+     position: relative;
      padding-bottom: 5px;
+     overflow: hidden;
 }
 
 /******************************************
 /* MAC FOLDERS
 /*******************************************/
 
-/* Mac folder wrapper styling */
+/* Mac Folder Wrapper Styling */
 .mac-folder-wrapper {
      display: flex;
      justify-content: end;
@@ -134,7 +157,7 @@ main {
      top: 70px;
      right: 0px;
 }
-/* Mac folder icon wrapper styling */
+/* Mac Folder Icon Wrapper Styling */
 .mac-folder-icon-wrapper {
      display: flex;
      
@@ -144,12 +167,13 @@ main {
      gap: 5px;
      color: white;
 }
-/* Folder icon styling */
+
+/* Folder Icon Styling */
 .folder-icon {
      width: 70px;
 }
 
-/* Mac folder text(span) styling */
+/* Mac Folder Text(span) Styling */
 .mac-folder-icon-wrapper span {
      font-family: SanFranciscoBold;
      font-size: 0.75rem;
@@ -157,12 +181,192 @@ main {
      letter-spacing: 0.05rem;
 }
 
+
+/******************************************
+/* CALCULATOR
+/*******************************************/
+/* Click To Drag Message Styling */
+.clickToDragMessage {
+     width: 100%;
+     padding: 9px 0;
+     border-radius: 17px 17px 0 0;
+     font-family: SanFranciscoBold;
+     font-size: 0.8rem;
+     color: white;
+     position: absolute;
+     top: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     background: #4a4a4ac3;
+     text-align: center;
+
+}
+
+/* Calculator Main Wrapper Styling */
+.calculatorMainWrapper {
+     width: 250px;
+     height: 446px;
+     padding: 11px;
+     border-radius: 17px;
+     box-shadow: 0px 0px 50px 0px rgba(0,0,0,1);
+     border: 1px solid #707378;
+     background: rgba(33, 33, 33, 0.87); 
+     backdrop-filter: blur(20px) brightness(1.1);
+     -webkit-backdrop-filter: blur(20px) brightness(1.1); /* Safari support */
+     outline: 1.5px solid rgb(0, 0, 0); 
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     position: absolute;
+     top: 230px;
+     left: 50%;
+     transform: translateX(-50%);
+
+}
+
+.calculatorMainWrapper:hover {
+     cursor: default;
+}
+
+
+/* Calculator Top Wrapper Styling */
+.calculator-top-wrapper  {
+     display: flex;
+     gap: 10px;
+}
+
+/* Calculator Resize Buttons General Styling */
+.calculator-resize-button {
+     width: 15px;
+     height: 15px;
+     border-radius: 50%;
+}
+
+/* Resize Button Red Styling */
+.calculator-top-wrapper .calculator-resize-button:nth-child(1){
+     background-color: #FE5F57;
+}
+
+/* Resize Button Yellow Styling */
+.calculator-top-wrapper .calculator-resize-button:nth-child(2){
+     background-color: #FDBB2E;
+}
+
+/* Resize Button Grey Styling */
+.calculator-top-wrapper .calculator-resize-button:nth-child(3){
+     background-color: #474745;
+}
+
+/* Calculator Bottom Wrapper Styling */
+.calculator-bottom-wrapper {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 7px;
+}
+
+/* Calculator Result Window Styling */
+.calculatorResultWindow {
+     text-align: right;
+     color: white;
+     font-family: SanFrancisco;
+     font-size: 2.5rem;
+
+}
+
+/* Calculator Bottom Wrapper Styling */
+.calculator-keypad-wrapper {
+     display: flex;
+     flex-wrap: wrap;
+}
+
+/* Calculator Keypad Button Styling */
+.calculator-keypad-wrapper button , .github-logo {
+     width: 25%;
+     aspect-ratio: 1/1;
+     justify-self: center;
+     align-self: center;
+}
+
+/* Calculator Inner Wrapper Keypad Styling */
+button div , a .git-logo-btn-wrapper {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.3rem;
+     font-family: SanFrancisco;
+     color: white;
+     border-radius: 50%;
+     width: 100%;
+     aspect-ratio: 1 / 1;
+}
+
+/* Calculator Keypad Numbers Styling */
+.number div , a .git-logo-btn-wrapper {
+     background-color: #52524E;
+}
+
+/* Calculator Keypad Top 3 Styling */
+.light-grey-calculator-btn div {
+     background-color: #70706E;
+}
+
+/* Calculator Keypad Operators Styling */
+.operator div {
+     background-color: #FF9500;
+}
+
+/* Calculator Keypad Numbers Styling */
+.number , .light-grey-calculator-btn , .operator , .github-logo {
+     padding: 3px;
+}
+
+/* Calculator Keypad GitHub Button Styling */
+.github-logo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+a:hover {
+     cursor: pointer;
+}
+
+/* Calculator Keypad GitHub Button Image Styling */
+.github-logo img {
+     width: 20px;
+}
+
+/* Make Button and Links Relative Positioned */
+button , a {
+     position: relative;
+}
+
+/* Calculator Keypad Button Hover Filter Styling */
+button div:nth-child(1).btnFilter , .github-logo .btnFilter {
+     opacity: 1;
+     /* opacity: 0.4; */
+     content: "";
+     position: absolute;
+     bottom: 3px;
+     width: calc(100% - 6px);
+     height: calc(100% - 6px);
+     border-radius: 50%;
+     background: rgba(255, 255, 255, 0.54); 
+     pointer-events: none; /* Allows clicks on content under the overlay */
+     border: none;
+ }
+
 /******************************************
 /* MAC DOCK
 /*******************************************/
 
 /* Mac dock wrapper styling */
 .mac-dock-wrapper {
+     position: absolute;
+     left: 50%;
+     transform: translateX(-50%);
+     bottom: 5px;
      display: flex;
      align-self: center;
      background: rgba(45, 45, 45, 0.263);
@@ -211,6 +415,11 @@ main {
      height: 5px;
      border: rgb(179, 179, 179) solid 2px;
      border-radius: 50%;
-     background-color:rgb(179, 179, 179) ;
+     background-color:rgb(179, 179, 179);
 }
 
+
+
+/******************************************
+/* MAC DOCK
+/*******************************************/
