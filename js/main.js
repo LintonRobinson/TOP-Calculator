@@ -65,7 +65,6 @@ document.querySelector('.calculatorTopWrapper').addEventListener('mousedown' , (
 
 // If the calculator isn't being grabbed, change cursor to "grab" on hover
 document.querySelector('.calculatorTopWrapper').addEventListener('mouseover',() => {
-    console.log(isDraggable)
     if (!isDraggable) {
         document.querySelector('.calculatorTopWrapper').style.cursor = "grab";
     }
@@ -121,4 +120,125 @@ document.addEventListener('mouseup',() => {
 })
 
 ////////////////////////////////////////////////////////////////////////////////////
+
+let numOne = 1
+
+let operator = "*"
+
+let numTwo = 2
+
+let currentResult
+
+
+
+let userEquation = [20,"+",5,"-",612,"/",8,"/",-27,"/",0,"*",59,"-",1,"-",6,"*",1,"/",3,"+",74,"-",6];
+
+
+
+
+
+/* Calculator "Calculations" */
+
+// If there is multiplication or division in the equation
+while (userEquation.includes("*") || userEquation.includes("/")) {
+    // Find the index of the first multiplication and division operator in the equation array
+    let multiplicationArrayIndex = userEquation.indexOf("*");
+    let divisionArrayIndex = userEquation.indexOf("/");
+    // Determine if this is the last equation
+    if (userEquation.includes("*") && !userEquation.includes("/")) {
+        multiplyFilter = true;
+        divideFilter = false;
+    } else if (userEquation.includes("/") && !userEquation.includes("*")) {
+        multiplyFilter = false;
+        divideFilter = true;
+    }
+    // If the multiplication or division comes first filter
+    if (multiplicationArrayIndex < divisionArrayIndex && userEquation.includes("*")) {
+        multiplyFilter = true;
+        divideFilter = false;
+    } else if (divisionArrayIndex < multiplicationArrayIndex && userEquation.includes("/")) {
+        multiplyFilter = false;
+        divideFilter = true;
+    }
+    // Multiplication or division equation in order of operations (whichever comes first) + push the result to the equation array
+    if (multiplyFilter) {
+        currentResult = multiplication(userEquation[multiplicationArrayIndex-1], userEquation[multiplicationArrayIndex+1]);
+        //console.log(`Multiplication: ${userEquation[multiplicationArrayIndex-1]} * ${userEquation[multiplicationArrayIndex+1]} = ${currentResult}`) 
+        userEquation.splice(multiplicationArrayIndex-1,3,currentResult);
+        //console.log(`The updated equation is: ${userEquation}`);
+        
+    } else {
+        currentResult = division(userEquation[divisionArrayIndex-1], userEquation[divisionArrayIndex+1]);
+        //console.log(`Division: ${userEquation[divisionArrayIndex-1]} / ${userEquation[divisionArrayIndex+1]} = ${currentResult}`)
+        userEquation.splice(divisionArrayIndex-1,3,currentResult);
+        //console.log(`The updated equation is: ${userEquation}`);
+    }
+};
+
+
+// If there is at least one equation left, addition or subtraction equation in order of operations (whichever is index 1) + push the result to the equation array
+while(userEquation.length >= 3) {
+    if (userEquation[1] === "+") {
+        let additionArrayIndex = userEquation.indexOf("+");
+        currentResult = addition(userEquation[additionArrayIndex-1], userEquation[additionArrayIndex+1]);
+        userEquation.splice(additionArrayIndex-1,3,currentResult);
+    } else {
+        let subtractionArrayIndex = userEquation.indexOf("-");
+        currentResult = subtraction(userEquation[subtractionArrayIndex-1], userEquation[subtractionArrayIndex+1]);
+        userEquation.splice(subtractionArrayIndex-1,3,currentResult);
+    }
+}
+
+    
+
+// [2, '/', 9, '+', 24, '-', 9, '/', 7, '+', 130, '/', 2, '+', 3, '-', 67, '/', 8]
+
+// [0.2222222222222222, '+', 24, '-', 1.2857142857142858, '+', 65, '+', 3, '-', 8.375]
+
+
+
+
+
+
+
+
+
+    
+   
+
+    
+
+
+
+
+
+
+// Pemdas
+
+// Find location of operators in order of pemdas
+
+
+
+
+
+function multiplication(numberOne,numberTwo) {
+    return numberOne * numberTwo 
+};
+
+function division(numberOne,numberTwo) {
+    return numberOne / numberTwo
+};
+
+function addition(numberOne,numberTwo) {
+    return numberOne + numberTwo
+};
+
+function subtraction(numberOne,numberTwo) {
+    return numberOne - numberTwo
+};
+
+
+function operate() {
+if (operator === "*") return multiplication()
+}
 
