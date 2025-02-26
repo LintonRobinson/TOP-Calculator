@@ -40,7 +40,7 @@ button {
 /* SanFrancisco Font */
 @font-face {
      font-family: SanFrancisco;
-     src: url(/fonts/SF-Pro-Display-Regular.otf) format('opentype');
+     src: url(fonts/SF-Pro-Display-Regular.otf) format('opentype');
      font-weight: normal;
 
      
@@ -48,7 +48,7 @@ button {
 /* SanFrancisco Bold Font */
 @font-face {
      font-family: SanFranciscoBold;
-     src: url(/fonts/SF-Pro-Display-Bold.otf) format('opentype');
+     src: url(fonts/SF-Pro-Display-Bold.otf) format('opentype');
      font-weight: bold;
 
      
@@ -258,7 +258,7 @@ main {
 }
 
 /* Calculator Bottom Wrapper Styling */
-.calculator-bottom-wrapper {
+.calculatorBottomWrapper {
      width: 100%;
      display: flex;
      flex-direction: column;
@@ -267,11 +267,24 @@ main {
 
 /* Calculator Result Window Styling */
 .calculatorResultWindow {
+     width: 100%;
      text-align: right;
      color: white;
      font-family: SanFrancisco;
      font-size: 2.5rem;
+     overflow-x: auto;
+     white-space: nowrap;
+}
 
+/* Calculator Result Window Styling */
+.calculatorPreviousEquationWindow {
+     width: 100%;
+     text-align: right;
+     color: #9F9F9F;
+     font-family: SanFrancisco;
+     font-size: 1.7rem;
+     overflow-x: auto;
+     white-space: nowrap;
 }
 
 /* Calculator Bottom Wrapper Styling */
@@ -309,6 +322,12 @@ button div , a .git-logo-btn-wrapper {
 /* Calculator Keypad Top 3 Styling */
 .light-grey-calculator-btn div {
      background-color: #70706E;
+}
+
+#backspaceImage {
+     display: none;
+     width: 55%;
+     aspect-ratio: 1 / 1;
 }
 
 /* Calculator Keypad Operators Styling */

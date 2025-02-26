@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lj's Calculator</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="/images/calculator-icon.png">
+    <link rel="icon" type="image/x-icon" href="images/calculator-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,7 +19,7 @@
     <main>
         <nav>
             <div class="menu-bar-left">
-                <img class="menu-bar-logos" src="/images/apple-icon.png" alt="Apple Logo">
+                <img class="menu-bar-logos" src="images/apple-icon.png" alt="Apple Logo">
                 <span class="menu-bar-text">Inspired By macOS</span>
                 <span class="menu-bar-text">File</span>
                 <span class="menu-bar-text">Edit</span>
@@ -27,9 +27,9 @@
                 <span class="menu-bar-text clickToReset">Click To Reset Calculator Position</span>
             </div>
             <div class="menu-bar-right">
-                <img class="menu-bar-logos" src="/images/wifi-icon.png" alt="Apple Logo">
-                <img class="menu-bar-logos" src="/images/search-icon.png" alt="Apple Logo">
-                <img class="menu-bar-logos" src="/images/control-center-icon.png" alt="Apple Logo">
+                <img class="menu-bar-logos" src="images/wifi-icon.png" alt="Apple Logo">
+                <img class="menu-bar-logos" src="images/search-icon.png" alt="Apple Logo">
+                <img class="menu-bar-logos" src="images/control-center-icon.png" alt="Apple Logo">
                 <span class="menu-bar-text liveDateAndTime"></span>
             </div>
         </nav>
@@ -50,88 +50,74 @@
                 <div class="calculator-resize-button"></div>
                 <div class="calculator-resize-button"></div>
             </div>
-            <div class="calculator-bottom-wrapper">
-                <div class="calculatorResultWindow">0</div>
+            <div class="calculatorBottomWrapper">
+                <div class="calculatorPreviousEquationWindow"></div>
+                <div class="calculatorResultWindow">0</div> <!-- Change to ID later? -->
                 <div class="calculator-keypad-wrapper">
-                    <button class="ac light-grey-calculator-btn">
-
-                        <div>AC</div>
+                    <button id="ac" class="light-grey-calculator-btn">
+                        <div>
+                            <span id="acText">AC</span>
+                            <img id="backspaceImage" src="images/backspace-icon.png" alt="">
+                        </div>
                     </button>
-                    <button class="plusMinus light-grey-calculator-btn">
-
+                    <button id="plusMinus" class="light-grey-calculator-btn">
                         <div>+/-</div>
                     </button>
-                    <button class="modulo light-grey-calculator-btn">
-
+                    <button id="percentage" class="light-grey-calculator-btn">
                         <div>%</div>
                     </button>
-                    <button class="division operator">
+                    <button id="division" class="operator">
 
                         <div>÷</div>
                     </button>
-                    <button class="seven number">
+                    <button id="seven" class="number">
                         <div id="sevenDiv">7</div>
                     </button>
-                    <button class="eight number">
-
+                    <button id="eight" class="number">
                         <div>8</div>
                     </button>
-                    <button class="nine number">
-
+                    <button id="nine" class="number">
                         <div>9</div>
                     </button>
-                    <button class="multiplication operator">
-
+                    <button id="multiplication" class="operator">
                         <div>×</div>
                     </button>
-                    <button class="four number">
-
+                    <button id="four" class="number">
                         <div>4</div>
                     </button>
-                    <button class="five number">
-
+                    <button id="five" class="number">
                         <div>5</div>
                     </button>
-                    <button class="six number">
-
+                    <button id="six" class="number">
                         <div>6</div>
                     </button>
-                    <button class="minus operator">
-
+                    <button id="subtraction" class="operator">
                         <div>-</div>
                     </button>
-                    <button class="one number">
-
+                    <button id="one" class="number">
                         <div>1</div>
                     </button>
-                    <button class="two number">
-
+                    <button id="two" class="number">
                         <div>2</div>
                     </button>
-                    <button class="three number">
-
+                    <button id="three" class="number">
                         <div>3</div>
                     </button>
-                    <button class="plus operator">
-
+                    <button id="addition" class="operator">
                         <div>+</div>
                     </button>
-                    <a class="github-logo">
-
+                    <a class="github-logo" href="https://github.com/LintonRobinson" target="_blank">
                         <div class="git-logo-btn-wrapper">
                             <img src="/images/github-icon.png" alt="GitHub Logo">
                         </div>
                     </a>
-                    <button class="zero number">
-
+                    <button id="zero" class="number">
                         <div>0</div>
                     </button>
-                    <button class="decimalPoint number">
-
+                    <button id="decimalPoint" class="number">
                         <div>.</div>
                     </button>
-                    <button class="equals operator">
-
+                    <button id="equals" class="operator">
                         <div>=</div>
                     </button>
                 </div>
@@ -140,30 +126,30 @@
 
         <div class="mac-dock-wrapper">
             <div class="mac-doc-icon-wrapper">
-                <img class="dock-icon" src="/images/finder-icon.png" alt="">
+                <img class="dock-icon" src="images/finder-icon.png" alt="">
                 <span class="mac-dock-dot"></span>
             </div>
             <div class="mac-doc-icon-wrapper">
-                <img class="dock-icon" src="/images/launch-pad-icon.png" alt="">
+                <img class="dock-icon" src="images/launch-pad-icon.png" alt="">
             </div>
             <div class="mac-doc-icon-wrapper">
-                <img class="dock-icon" src="/images/terminal-icon.png" alt="">
+                <img class="dock-icon" src="images/terminal-icon.png" alt="">
             </div>
             <div class="mac-doc-icon-wrapper">
-                <img class="dock-icon" src="/images/vs-code-icon.png" alt="">
+                <img class="dock-icon" src="images/vs-code-icon.png" alt="">
                 <span class="mac-dock-dot"></span>
             </div>
             <div class="mac-doc-icon-wrapper">
-                <img class="dock-icon" src="/images/calculator-icon.png" alt="Calculator Icon">
+                <img class="dock-icon" src="images/calculator-icon.png" alt="Calculator Icon">
                 <span class="mac-dock-dot"></span>
             </div>
 
 
             <div class="mac-doc-icon-wrapper">
-                <img class="dock-icon" src="/images/spotify-icon.png" alt="Spotify Icon">
+                <img class="dock-icon" src="images/spotify-icon.png" alt="Spotify Icon">
             </div>
             <div class="mac-doc-icon-wrapper">
-                <img class="dock-icon" src="/images/trash-icon.png" alt="Trash Icon">
+                <img class="dock-icon" src="images/trash-icon.png" alt="Trash Icon">
             </div>
         </div>
     </main>
