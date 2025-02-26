@@ -821,8 +821,6 @@ keypadOperatorEquals.addEventListener('click', () => {
         clearAfterComputedEquation = true;
         operatorEntry = false;
     };
-    
-
 });
 
 
