@@ -72,7 +72,7 @@ body {
      height: 100vh;
      overflow: hidden;
      background-position: center ;
-     background-image: url(images/Sequoia-Sunrise.png);
+     background-image: url(./images/Sequoia-Sunrise.png);
      background-size: cover;
      background-repeat: no-repeat;
      position: relative;
